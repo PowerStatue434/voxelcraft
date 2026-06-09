@@ -208,9 +208,9 @@ class Server:
 
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        sock.bind(("216.151.17.92", PORT))
+        sock.bind(("0.0.0.0", PORT))
         sock.listen(MAX_PLAYERS)
-        log.info(f"VoxelCraft server listening on 216.151.17.92:{PORT}")
+        log.info(f"VoxelCraft server listening on 0.0.0.0:{PORT}")
 
         while True:
             try:
